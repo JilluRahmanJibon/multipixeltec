@@ -13,7 +13,7 @@ function PatientReportContent(props: any) {
   const configuration = AuthService.getConfiguration();
   const [loaded, setLoaded] = useState(false);
   const [patient, setPatient] = useState(props?.patient);
-  console.log(patient);
+ 
   const [report, setReport] = useState(MODEL.REPORT);
   const [refValue, setRefValue] = useState(MODEL.REF_VALUE);
   const pageStyle = `
