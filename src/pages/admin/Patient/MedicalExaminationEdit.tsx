@@ -1,8 +1,6 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
-import MedicalExaminationEditFrom from '../../../components/detail/MedicalExamninationEditForm';
-import MedicalExaminationFormEdit from '../../../components/detail/MedicalExamninationEditForm';
-import MedicalExaminationEditing from '../../../components/detail/MedicalExamninationEditForm';
+import MedicalExaminationEditing from '../../../components/detail/MedicalExaminationEditing';
 
 function MedicalExaminationEdit(props: any) {
   const { patient } = props

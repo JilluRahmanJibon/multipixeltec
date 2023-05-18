@@ -12,7 +12,7 @@ import XRayUpload from "../../../components/ui/XRayUpload";
 import PatientBillsContent from "../../../components/detail/PatientBillsContent";
 import { MODEL } from "../../../utils/FormFields";
 import MedicalExamination from './MedicalExamination';
-import MedicalExaminationEditing from '../../../components/detail/MedicalExamninationEditForm';
+import MedicalExaminationEditing from '../../../components/detail/MedicalExaminationEditing';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
@@ -131,7 +131,7 @@ function PatientList(props: any) {
       .delete(`https://perfect.gccerp.org/api/v1/patient/${patientId}`)
       .then(resp => {
         console.log(resp);
-        
+
         toast("Successfully deleted patient")
         setAction("")
       })

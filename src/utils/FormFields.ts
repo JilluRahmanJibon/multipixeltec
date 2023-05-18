@@ -1946,6 +1946,14 @@ export const REPORT = {
 
 export const MEDICALEXAMINATION = {
     id: null,
+    asthama: "",
+    epilepsy: "",
+    remarks: "",
+    diabates: "",
+    bloodPressure: "",
+    familyHistory: "",
+    qualification: "",
+    hospitalAddress: "",
     heartSize: "",
     heartSound: "",
     breathSound: "",

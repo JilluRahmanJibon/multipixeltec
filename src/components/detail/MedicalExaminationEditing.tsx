@@ -19,6 +19,14 @@ function MedicalExaminationEditing(props: any) {
   const [refValue, setRefValue] = useState(MODEL.REF_VALUE);
   const [values, setValues] = useState({
     id: null,
+    asthama: "",
+    epilepsy: "",
+    remarks: "",
+    diabates: "",
+    bloodPressure: "",
+    familyHistory: "",
+    qualification: "",
+    hospitalAddress: "",
     heartSize: "",
     heartSound: "",
     breathSound: "",
@@ -135,7 +143,7 @@ function MedicalExaminationEditing(props: any) {
                       <h4>Address : {configuration.invoiceAddress}</h4>
                     </div>
                     <div className='d-flex justify-content-around'>
-                      <p>CONTACT NO. : {configuration.reportContactNumber} </p>
+                      <p>CONTACT NO : {configuration.reportContactNumber} </p>
                       <p>Website :{configuration.websiteUrl} </p>
                       <p>Report Download : {configuration.reportUrl}</p>
                     </div>
@@ -196,7 +204,7 @@ function MedicalExaminationEditing(props: any) {
 
                   <tr className='w-25'>
                     <td className="font-size border-top-0 border-left-0 border-bottom-0 black" style={{ width: '100px' }}>Sex</td>
-                    <td className="font-size border-0 w-50 black">Mail</td>
+                    <td className="font-size border-0 w-50 black"> </td>
 
                   </tr>
 
@@ -214,12 +222,22 @@ function MedicalExaminationEditing(props: any) {
             <table className="table-bordered table">
               <tbody>
                 <tr>
-                  <td className="font-size w-25  black">ASTHMA</td>
-                  <td className="font-size  black"> </td>
-                  <td className="font-size  black"> </td>
-                  <td className="font-size w-25 black">EPILEPSY /FITS</td>
-                  <td className="font-size  black"> </td>
-                  <td className="font-size  black"> </td>
+                  <td style={{ width: '20%', paddingLeft: '5px' }} className="font-size w-25  black">ASTHMA</td>
+                  <td style={{ width: '15%', paddingLeft: '5px' }} className="font-size  black">
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.asthama}
+                      name='asthama' type="text"
+                      className='medicalInput border-0' />
+                  </td>
+                  <td style={{ width: '10%', paddingLeft: '5px' }} className="font-size  black"> </td>
+                  <td style={{ width: '20%', paddingLeft: '5px' }} className="font-size w-25 black">EPILEPSY /FITS</td>
+                  <td style={{ width: '15%', paddingLeft: '5px' }} className="font-size  black">
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.epilepsy}
+                      name='epilepsy' type="text"
+                      className='medicalInput border-0' />
+                  </td>
+                  <td style={{ width: '15%', paddingLeft: '5px' }} className="font-size  black"> </td>
                 </tr>
               </tbody>
             </table>
@@ -231,7 +249,14 @@ function MedicalExaminationEditing(props: any) {
               <tbody>
                 <tr>
                   <td rowSpan={5} className="font-size black">If yes remarks:
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.remarks}
+                      name='remarks' type="text"
+                      className='medicalInput border-0 w-75 pl-2' />
                   </td>
+
+
+
                 </tr>
               </tbody>
             </table>
@@ -242,12 +267,22 @@ function MedicalExaminationEditing(props: any) {
             <table className="table-bordered table mt-3">
               <tbody>
                 <tr>
-                  <td className="font-size w-25 black">Diabetes</td>
-                  <td className="font-size black"> </td>
-                  <td className="font-size black"> </td>
-                  <td className="font-size w-25 black">Blood Pressure</td>
-                  <td className="font-size black"> </td>
-                  <td className="font-size black"> </td>
+                  <td style={{ width: "20%" }} className="font-size black">Diabetes</td>
+                  <td style={{ width: "15%" }} className="font-size  black">
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.diabates}
+                      name='diabates' type="text"
+                      className='medicalInput border-0 pl-2' />
+                  </td>
+                  <td style={{ width: "10%" }} className="font-size black"> </td>
+                  <td style={{ width: "20%" }} className="font-size black">Blood Pressure</td>
+                  <td style={{ width: "15%" }} className="font-size black">
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.bloodPressure}
+                      name='bloodPressure' type="text"
+                      className='medicalInput border-0 pl-2' />
+                  </td>
+                  <td style={{ width: "15%" }} className="font-size black"> </td>
                 </tr>
               </tbody>
             </table>
@@ -260,7 +295,11 @@ function MedicalExaminationEditing(props: any) {
               <tbody>
                 <tr>
                   <td rowSpan={5} className="font-size black">
-                    &nbsp;
+
+                    <input
+                      onChange={onChange} defaultValue={medicalReport?.familyHistory}
+                      name='familyHistory' type="text"
+                      className='medicalInput border-0 w-100' />
                   </td>
                 </tr>
               </tbody>
@@ -1384,9 +1423,19 @@ function MedicalExaminationEditing(props: any) {
                       <td className="font-size black">
                         Qualification
                       </td>
-                      <td className="font-size black"></td>
+                      <td className="font-size black">
+                        <input
+                          onChange={onChange} defaultValue={medicalReport?.qualification}
+                          name='qualification' type="text"
+                          className='medicalInput border-0 w-100' />
+                      </td>
                       <td className="font-size black">Hospital Address</td>
-                      <td className="font-size black"></td>
+                      <td className="font-size black">
+                        <input
+                          onChange={onChange} defaultValue={medicalReport?.hospitalAddress}
+                          name='hospitalAddress' type="text"
+                          className='medicalInput border-0 w-100' />
+                      </td>
                     </tr>
 
                   </tbody>
